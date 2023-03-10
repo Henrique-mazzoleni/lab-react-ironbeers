@@ -21,7 +21,7 @@ export default function AllBeersPage () {
         <h1>All Beers</h1>
         <ul>
           {beersList.length !== 0 &&
-            beersList.map((beer) => <BeerShortCard key={beer._id} {...beer}/>)}
+            beersList.map((beer) => <BeerShortCard key={beer._id} {...beer} />)}
         </ul>
       </Fragment>
     );
