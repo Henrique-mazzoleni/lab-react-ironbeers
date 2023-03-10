@@ -8,7 +8,7 @@ import NewBeerPage from './pages/NewBeerPage';
 import RandomBeerPage from './pages/RandomBeerPage';
 import SingleBeerPage from './pages/SingleBeerPage';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Routes>
@@ -21,5 +21,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

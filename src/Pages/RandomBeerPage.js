@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
+import axios from "axios";
 
 import Navbar from "../components/Navbar";
 import DisplayBeer from "../components/DisplayBeer";
@@ -8,14 +9,16 @@ export default function RandomBeerPage () {
 
   useEffect(() => {
     const fetchBeerData = async () => {
-      const response = await fetch(
+      const response = await axios.get(
         "https://ih-beers-api2.herokuapp.com/beers/random"
       );
-      const data = await response.json();
-      setBeerData(data);
+      setBeerData(response.data);
     };
-
-    fetchBeerData();
+    try {
+      fetchBeerData();
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
 
   return (
