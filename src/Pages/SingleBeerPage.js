@@ -1,6 +1,8 @@
 import { Fragment, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+
 import Navbar from "../components/Navbar";
+import DisplayBeer from "../components/DisplayBeer";
 
 export default function SingleBeerPage () {
     const { beerId } = useParams();
@@ -18,10 +20,6 @@ export default function SingleBeerPage () {
 
     return <Fragment>
         <Navbar />
-        <img src={beerData.image_url} alt={beerData.name} />
-        <h3>{beerData.name} <span>{beerData.attenuation_level}</span></h3>
-        <h4>{beerData.tagline} <span>{beerData.first_brewed}</span></h4>
-        <p>{beerData.description}</p>
-        <small>{beerData.contributed_by}</small>
+        <DisplayBeer {...beerData} />
     </Fragment> 
 }
