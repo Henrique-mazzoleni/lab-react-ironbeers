@@ -2,7 +2,6 @@ import { Fragment, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
-import axios from "axios";
 
 import styles from './NewBeerPage.module.css'
 
@@ -34,7 +33,15 @@ export default function NewBeerPage () {
     event.preventDefault()
 
     try {
-      await axios.post("https://ih-beers-api2.herokuapp.com/beers/new", inputObject)
+      await fetch('https://ih-beers-api2.herokuapp.com/beers/new', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          "Accept":"application/json"
+        }, 
+        body: JSON.stringify(inputObject)
+      });
+      
       navigate("/beers");
     } catch (error) {
       console.log(error)

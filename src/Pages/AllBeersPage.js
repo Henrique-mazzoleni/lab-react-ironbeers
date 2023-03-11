@@ -1,5 +1,4 @@
 import { Fragment, useEffect, useState } from "react"
-import axios from "axios";
 
 import BeerShortCard from "../components/BeerShortCard";
 import Navbar from "../components/Navbar";
@@ -17,8 +16,9 @@ export default function AllBeersPage () {
 
   useEffect(() => {
     const fetchBeers = async () => {
-      const response = await axios.get(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
-      setBeersList(response.data)
+      const response = await fetch(`https://ih-beers-api2.herokuapp.com/beers/search?q=${query}`)
+      const data = await response.json()
+      setBeersList(data)
     }
     try {
       fetchBeers()
