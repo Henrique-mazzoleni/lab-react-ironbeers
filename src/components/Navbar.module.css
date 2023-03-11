@@ -1,0 +1,11 @@
+.navbar {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #48c8ff;
+}
+
+.navbar a {
+    color: #fff;
+}

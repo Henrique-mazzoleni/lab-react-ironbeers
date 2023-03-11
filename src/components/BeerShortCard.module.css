@@ -1,0 +1,40 @@
+.card {
+    display: flex;
+    gap: 2rem;
+    height: 200px;
+    padding: 2rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.card a {
+    flex: 1 0 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.card img{
+    height: 100%;
+}
+
+.info {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info h3 {
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin: 0 0 12px 0;
+}
+
+.info small {
+    display: block;
+    color: #777;
+    margin-bottom: 6px;
+}
+
+.info p {
+    font-size: 0.6rem;
+}

@@ -1,0 +1,48 @@
+.displayCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.displayCard img {
+    height: 300px;
+    margin: auto;
+}
+
+.displayCard h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 10px;
+}
+
+.displayCard h3 span {
+    color: #ccc;
+}
+
+.displayCard h4 {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 10px;
+    color: #ccc;
+    font-size: .9rem;
+}
+
+.displayCard h4 span {
+    color: #000;
+}
+
+.displayCard p {
+    padding: 0 15px 15px;
+    text-align: justify;
+}
+
+.displayCard small {
+    align-self: flex-start;
+    padding: 0 15px 15px;
+    color: #888;
+}

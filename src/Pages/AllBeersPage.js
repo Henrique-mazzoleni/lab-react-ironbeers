@@ -1,7 +1,10 @@
 import { Fragment, useEffect, useState } from "react"
 import axios from "axios";
+
 import BeerShortCard from "../components/BeerShortCard";
 import Navbar from "../components/Navbar";
+
+import styles from './AllBeersPage.module.css'
 
 export default function AllBeersPage () {
   const [beersList, setBeersList] = useState([]);
@@ -27,7 +30,7 @@ export default function AllBeersPage () {
     return (
       <Fragment>
         <Navbar />
-        <label>Search Beers
+        <label className={styles.search}>Search Beers
           <input type="text" value={query} onChange={queryHandler} />
         </label>
         <ul>

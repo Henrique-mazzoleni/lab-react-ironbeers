@@ -1,8 +1,10 @@
 import { Fragment, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import Navbar from "../components/Navbar";
 import axios from "axios";
 
+import styles from './NewBeerPage.module.css'
 
 export default function NewBeerPage () {
   const navigate = useNavigate()
@@ -42,7 +44,7 @@ export default function NewBeerPage () {
   return (
     <Fragment>
       <Navbar />
-      <form onSubmit={submitHandler}>
+      <form className={styles.form} onSubmit={submitHandler}>
         <label>
           Name
           <input
